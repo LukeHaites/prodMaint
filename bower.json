@@ -1,0 +1,23 @@
+{
+  "name": "prodMaint",
+  "version": "0.0.0",
+  "authors": [
+    "Luke Haites <Luke.Haites@gmail.com>"
+  ],
+  "description": "Product Maintenance",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "content/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.20",
+    "angular-resource": "~1.2.20",
+    "angular-route": "~1.2.20",
+    "ui-bootstrap": "~0.11.0"
+  }
+}

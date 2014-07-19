@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="prodMaint">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../content/vendor/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../content/css/app.css"/>
+    <title>Product Maintenance</title>
+</head>
+<body ng-controller="prodListCtrl">
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Season</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td>{{item.Code}}</td>
+                <td>{{item.Description}}</td>
+                <td>{{item.Season}}</td>
+                <td><button class="button" ng-click="deleteItem(item._id)">Delete</button></td>
+                <td><button class="button" ng-click="editItem()" ng-controller="editItemCtrl">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="../content/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../content/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../content/vendor/angular/angular.js"></script>
+<script src="../content/vendor/ui-bootstrap/dist/ui-bootstrap-tpls-0.11.0.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/ProdListController.js"></script>
+<script src="controllers/ItemEditController.js"></script>
+<script src="services/ProdList.js"></script>
+
+</body>
+</html>
